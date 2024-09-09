@@ -41,5 +41,61 @@ pdf_scanner/│
          └── pdf_bhavesh.yar 
  
 
+## Different ways u can run this script with your own customisation
+### 1. Basic Usage: Scanning a Single File
+If you want to scan a single PDF file, you can run:
 
+`python main.py /path/to/file.pdf`
+
+### 2. Scanning Multiple Files
+You can specify multiple PDF files at once:
+
+`python main.py /path/to/file1.pdf /path/to/file2.pdf`
+
+### 3. Scanning a Directory
+To scan all PDF files within a directory (including subdirectories), use:
+
+`python main.py /path/to/directory`
+
+### 4. Using a Custom Configuration File
+If you want to use a specific configuration file (config.ini), specify it with the -c or --config argument:
+
+`python main.py /path/to/directory -c /path/to/custom_config.ini`
+
+### 5. Specifying the Number of Threads
+By default, the script uses the number of CPU cores available. You can override this with the -t or --threads argument:
+
+`python main.py /path/to/directory -t 8`
+
+### 6. Combining Directory, Configuration File, and Threads
+You can combine all options to have complete control over the execution:
+
+`python main.py /path/to/directory -c /path/to/custom_config.ini -t 4`
+
+### 7. Running the Script Without Specifying a Configuration File
+If you place config.ini in the project root directory, you don't need to specify it explicitly:
+
+`python main.py /path/to/directory`
+
+### 8. Running the Script Without Specifying a Configuration File
+If you place config.ini in the project root directory, you don't need to specify it explicitly:
+
+`python main.py /path/to/directory`
+
+### 9. Using Environment Variables for the Configuration File
+If you prefer to set the configuration file path via an environment variable:
+
+`export PDF_SCANNER_CONFIG=/path/to/config.ini
+python main.py /path/to/directory`
+
+### 10. Displaying Help Information
+If you want to see all available options and arguments:
+
+`python main.py --help`
+
+### 11. Running the Script in a Virtual Environment
+If you're using a virtual environment, make sure to activate it first, then run the script as usual:
+
+`source venv/bin/activate
+python main.py /path/to/directory`
 
